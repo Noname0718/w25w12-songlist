@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import SongList from './pages/SongList.jsx'
 import SongDetail from './pages/SongDetail.jsx'
-
+import { getSongList } from './api/songApi'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
     fetchSongs()
   }, [])
-  
+
   return (
     <Routes>
       <Route path="/" element={<SongList songs={songs} />} />
